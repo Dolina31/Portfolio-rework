@@ -1,0 +1,57 @@
+.projects-page_content {
+  justify-content: start !important;
+  gap: 50px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+card {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.projects-page_content img {
+  height: 370px;
+  width: 326px;
+  object-fit: cover;
+}
+
+.card-infos {
+  margin-block: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.projects-page_content {
+  display: flex;
+  gap: 50px;
+  overflow-x: auto;
+
+  /* Firefox */
+  scrollbar-width: thin; /* rend la scrollbar fine */
+  scrollbar-color: #888888 transparent; /* couleur du pouce / fond */
+}
+
+/* Chrome, Edge, Safari */
+.projects-page_content::-webkit-scrollbar {
+  height: 8px; /* hauteur de la scrollbar horizontale */
+}
+
+.projects-page_content::-webkit-scrollbar-track {
+  background: transparent; /* pas de contour */
+}
+
+.projects-page_content::-webkit-scrollbar-thumb {
+  background-color: #888; /* couleur du scroll */
+  border-radius: 4px; /* arrondi du pouce */
+  transition: background-color 0.3s;
+}
+
+.projects-page_content::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* couleur au hover */
+}

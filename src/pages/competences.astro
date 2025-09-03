@@ -1,0 +1,27 @@
+---
+import Layout from "../components/Layout.jsx";
+import SkillsBar from "../components/SkillsBar.jsx";
+
+const currentPath = Astro.url.pathname;
+
+const skillsInfos = [
+  { name: "Design et maquette", progress: "80%" },
+  { name: "Intégration de maquette", progress: "86%" },
+  { name: "Fonctionnalités complexes", progress: "50%" },
+  { name: "Référencement Google et SEO", progress: "70%" },
+];
+---
+
+<Layout currentPath={currentPath}>
+  <div class="page_content skills-page_content">
+    <h1 class="sr-only">Compétences</h1>
+    {
+      skillsInfos.map((skill, i) => (
+        <div class="skill_wrapper">
+          <h2>{skill.name}</h2>
+          <SkillsBar client:load progress={skill.progress} index={i} />
+        </div>
+      ))
+    }
+  </div>
+</Layout>

@@ -1,0 +1,41 @@
+.skills-page_content {
+  margin-inline: 50px;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.skills-page_content h2 {
+  margin-bottom: 25px;
+  font-weight: 200;
+  font-family: "Montserrat", sans-serif;
+}
+
+.skill_wrapper {
+  width: 100%;
+}
+
+.skill-bar,
+.skill-bar-progress {
+  display: block;
+  height: 13px;
+}
+
+.skill-bar {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+.skill-bar-progress {
+  z-index: 999;
+  background-color: #eb9100;
+}
+
+.skill-bar-progress {
+  width: 0;
+  height: 13px;
+  background-color: #eb9100;
+  transition: width 0.6s ease-out;
+}
+.skill-bar-progress.active {
+  width: var(--target-width);
+}

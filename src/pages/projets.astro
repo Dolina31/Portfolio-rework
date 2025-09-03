@@ -1,0 +1,72 @@
+---
+import Layout from "../components/Layout.jsx";
+import HorizontalScroll from "../components/Scroll.jsx";
+import "../styles/projets.css";
+
+const currentPath = Astro.url.pathname;
+---
+
+<Layout currentPath={currentPath}>
+  <h1 class="sr-only">Projets</h1>
+  <HorizontalScroll client:load>
+    <card>
+      <img src="/images/projects-img/montarel.png" alt="" />
+      <div class="card-infos">
+        <h2>Le carnet de Montarel</h2>
+        <p>Wold Building</p>
+        <p>En cours</p>
+      </div>
+      <span></span>
+    </card>
+
+    <card>
+      <img src="/images/projects-img/thomasbeau.png" alt="" />
+      <div class="card-infos">
+        <h2>Thomas Beau</h2>
+        <p>Auteur</p>
+        <p>Terminé</p>
+      </div>
+      <span></span>
+    </card>
+
+    <card>
+      <img src="/images/projects-img/travelplanner.png" alt="" />
+      <div class="card-infos">
+        <h2>Travel planner</h2>
+        <p>Auteur</p>
+        <p>Terminé</p>
+      </div>
+      <span></span>
+    </card>
+
+    <card>
+      <img src="/images/projects-img/anazir.png" alt="" />
+      <div class="card-infos">
+        <h2>Anazir</h2>
+        <p>Auteur</p>
+        <p>Terminé</p>
+      </div>
+      <span></span>
+    </card>
+
+    <card>
+      <img src="/images/projects-img/thomasbeau.png" alt="" />
+      <div class="card-infos">
+        <h2>Thomas Beau</h2>
+        <p>Auteur</p>
+        <p>Terminé</p>
+      </div>
+      <span></span>
+    </card>
+
+    <card>
+      <img src="/images/projects-img/thomasbeau.png" alt="" />
+      <div class="card-infos">
+        <h2>Thomas Beau</h2>
+        <p>Auteur</p>
+        <p>Terminé</p>
+      </div>
+      <span></span>
+    </card>
+  </HorizontalScroll>
+</Layout>

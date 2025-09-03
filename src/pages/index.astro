@@ -1,16 +1,18 @@
 ---
-
+import Layout from "../components/Layout.jsx";
+import "../styles/global.css";
+import "../styles/index.css";
+const currentPath = Astro.url.pathname;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout currentPath={currentPath}>
+  <div class="page_content index-page_content">
+    <h1>
+      Li<span class="orange-letter">n</span>e I<span class="orange-letter"
+        >b</span
+      >o
+    </h1>
+    <p>Développeuse et webdesigneuse</p>
+    <a href="/a-propos" class="index_cta">En savoir plus</a>
+  </div>
+</Layout>

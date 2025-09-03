@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  height: 76%;
+  justify-content: center;
+  width: 250px;
+}
+
+nav a {
+  color: black;
+  font-size: 1.6em;
+  font-weight: 300;
+  transition: transform 0.1s;
+}
+
+nav a:hover {
+  color: #eb9100;
+  font-weight: 600;
+}
+
+nav a.active {
+  color: #eb9100;
+  font-weight: bold;
+}

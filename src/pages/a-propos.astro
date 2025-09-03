@@ -1,0 +1,22 @@
+---
+import Layout from "../components/Layout.jsx";
+import "../styles/a-propos.css";
+const currentPath = Astro.url.pathname;
+---
+
+<Layout currentPath={currentPath}>
+  <div class="page_content about-page_content">
+    <h1 class="sr-only">À Propos</h1>
+    <p>
+      Je suis Line Ibo, développeuse web spécialisée dans la création de sites
+      vitrines modernes et accessibles. <br /><br /> Formée en intégration web (HTML,
+      CSS, JavaScript) et en design d’interfaces avec Figma, j’allie technique et
+      créativité pour concevoir des sites adaptés à votre activité.<br /><br
+      />Mon objectif est de proposer des sites simples, professionnels et
+      abordables, pour les petites entreprises ou indépendants qui souhaitent
+      être visibles sur le web.<br /><br /> Vous souhaitez un site clair, moderne
+      et à votre image ? Discutons de vos besoins et construisons-le ensemble.
+    </p>
+    <img src="/images/portrait.png" alt="Portrait de Line Ibo" />
+  </div>
+</Layout>
