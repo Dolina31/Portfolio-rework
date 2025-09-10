@@ -1,0 +1,9 @@
+---
+import Layout from "../components/Layout.jsx";
+import ContactForm from "../components/ContactForm.jsx";
+---
+
+<Layout currentPath={Astro.url.pathname}>
+  <h1 class="sr-only">Projets</h1>
+  <ContactForm client:load />
+</Layout>

@@ -1,0 +1,109 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 97%;
+  height: 97%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  /* combine centrage + translation pour l'animation */
+  transform: translate(-50%, -50%) translateY(20px);
+  transition: opacity 0.5s ease, transform 0.3s ease-in;
+}
+
+.modal.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0);
+}
+
+.modal_close {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+  cursor: pointer;
+  background-color: #ffc059;
+  color: white;
+  border: none;
+  position: absolute;
+  top: 25px;
+  right: 45px;
+  padding: 3px 9px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal_close:hover {
+  transform: scale(1.1);
+}
+
+.modal_content {
+  max-width: 62%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  gap: 30px;
+}
+
+.modal img {
+  height: 370px;
+  width: 360px;
+  object-fit: cover;
+  object-position: top;
+  box-shadow: 2px 0px 7px #474646e0;
+}
+
+.modal_img {
+  position: relative;
+}
+
+.modal .img_orange-border {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 7px;
+  width: 130%;
+  background-color: #ffc059;
+}
+
+.modal_title {
+  font-family: "Montaga", serif;
+  font-weight: 500;
+  font-size: 2.3em;
+  margin-block: 20px;
+}
+
+.modal_text {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.modal_links {
+  margin-top: 30px;
+  display: flex;
+  gap: 40px;
+}
+
+.modal_links a {
+  font-size: 1.3em;
+  text-align: center;
+  font-weight: 500;
+  background-color: #ffc059;
+  padding-block: 10px;
+  width: 160px;
+  color: White;
+  box-shadow: 2px 2px 6px #00000033;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal_links a:hover {
+  transform: scale(1.05);
+}

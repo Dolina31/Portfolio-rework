@@ -1,72 +1,41 @@
 ---
 import Layout from "../components/Layout.jsx";
 import HorizontalScroll from "../components/Scroll.jsx";
+import Modal from "../components/Modal.jsx";
+import projects from "../data/projets.json";
+import MarkdownRenderer from "../components/MarkdownRenderer.jsx";
 import "../styles/projets.css";
-
-const currentPath = Astro.url.pathname;
 ---
 
-<Layout currentPath={currentPath}>
+<Layout currentPath={Astro.url.pathname}>
   <h1 class="sr-only">Projets</h1>
-  <HorizontalScroll client:load>
-    <card>
-      <img src="/images/projects-img/montarel.png" alt="" />
-      <div class="card-infos">
-        <h2>Le carnet de Montarel</h2>
-        <p>Wold Building</p>
-        <p>En cours</p>
-      </div>
-      <span></span>
-    </card>
 
-    <card>
-      <img src="/images/projects-img/thomasbeau.png" alt="" />
-      <div class="card-infos">
-        <h2>Thomas Beau</h2>
-        <p>Auteur</p>
-        <p>Terminé</p>
-      </div>
-      <span></span>
-    </card>
+  <!-- Cards côté serveur -->
+  <div class="page_content projects-page_content">
+    <HorizontalScroll client:load>
+      {
+        projects.map((project, i) => (
+          <card class="card" key={i}>
+            <img src={project.image} alt={project.title} />
+            <div class="card-infos">
+              <h2>{project.title}</h2>
+              <div class="card_text">
+                <MarkdownRenderer content={project.description} />
+              </div>
+              <button class="open-modal-btn" data-project-index={i}>
+                Plus
+              </button>
 
-    <card>
-      <img src="/images/projects-img/travelplanner.png" alt="" />
-      <div class="card-infos">
-        <h2>Travel planner</h2>
-        <p>Auteur</p>
-        <p>Terminé</p>
-      </div>
-      <span></span>
-    </card>
+              <div class="card_orange-border_wrapper">
+                <span class="card_orange-border" />
+              </div>
+            </div>
+          </card>
+        ))
+      }
+    </HorizontalScroll>
+  </div>
 
-    <card>
-      <img src="/images/projects-img/anazir.png" alt="" />
-      <div class="card-infos">
-        <h2>Anazir</h2>
-        <p>Auteur</p>
-        <p>Terminé</p>
-      </div>
-      <span></span>
-    </card>
-
-    <card>
-      <img src="/images/projects-img/thomasbeau.png" alt="" />
-      <div class="card-infos">
-        <h2>Thomas Beau</h2>
-        <p>Auteur</p>
-        <p>Terminé</p>
-      </div>
-      <span></span>
-    </card>
-
-    <card>
-      <img src="/images/projects-img/thomasbeau.png" alt="" />
-      <div class="card-infos">
-        <h2>Thomas Beau</h2>
-        <p>Auteur</p>
-        <p>Terminé</p>
-      </div>
-      <span></span>
-    </card>
-  </HorizontalScroll>
+  <!-- Modale React globale -->
+  <Modal projects={projects} client:load />
 </Layout>

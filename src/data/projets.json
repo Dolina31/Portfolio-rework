@@ -1,0 +1,36 @@
+[
+    {
+        "statut": "En cours",
+        "image": "/images/projets/montarel.png",
+        "title": "Le carnet de Montarel",
+        "description": "Univers fantasy en développement regroupant cartes, récits et idées pour donner vie à Montarel.",
+        "descriptionText": "Pour organiser toutes les idées et informations de l’univers fantasy que je crée sur mon temps libre, j’ai conçu ce site comme un outil de référence.\n\nPour le moment, seule la section personnages est disponible, mais le site est toujours en cours de développement et évoluera avec le temps.\n\nCôté design, je souhaitais un style carnet ancien, façon journal ou carnet de notes, pour donner l’impression de feuilleter les pages d’un manuscrit tout en restant lisible et moderne.",
+        "linkM": "https://monportfolio.com",
+        "linkS": "https://carnet-de-montarel.vercel.app/"
+    },
+    {
+        "statut": "Terminé",
+        "image": "/images/projets/thomasbeau.png",
+        "title": "Thomas Beau",
+        "description": "Portfolio d’un jeune auteur présentant ses romans publiés et en cours d’écriture.",
+        "descriptionText": "Projet réalisé pour un auteur souhaitant présenter ses romans. Le site a été conçu selon ses envies esthétiques et ses préférences de design, afin de créer un rendu fidèle à sa vision.\n\nLe site inclut plusieurs fonctionnalités clés : présentation détaillée des livres publiés et en cours, notes de l’auteur sur ses ouvrages, et extraits exclusifs pour enrichir la bibliographie.",
+        "linkM": "https://www.figma.com/design/XNFXDaNFkJMQHMQYHTqtuM/Projet-Thomas?node-id=0-1&p=f&t=NHHNUAPAYwBvKt5L-0",
+        "linkS": "https://thomas-beau.vercel.app/"
+    },
+    {
+        "statut": "En cours",
+        "image": "/images/projets/travelplanner.png",
+        "title": "Travel Planner",
+        "description": "Réalisation d’une maquette pour un travel planner freelance.\n*Projet fictif.",
+        "descriptionText": "Projet fictif réalisé dans le cadre d’un exercice personnel pour m’entraîner au design web.\n\n L’objectif était de créer une maquette de site présentant les services d’un client travel planner freelance, avec des sections typiques : présentation du service, portfolio de voyages proposés, et contact.\n\n Seule la maquette a été conçue, il n’existe pas de site fonctionnel pour ce projet.",
+        "linkM": "https://www.figma.com/design/kvgaBNa59XKwR209xVcfkq/Untitled?node-id=2-2&t=NHHNUAPAYwBvKt5L-0"
+    },
+    {
+        "statut": "Terminé",
+        "image": "/images/projets/anazir.png",
+        "title": "Anazir",
+        "description": "Site vitrine réalisé pour Threevision, présentant leur jeu mobile Anazir.",
+        "descriptionText": "Réalisation du site vitrine pour le jeu mobile Anazir de Threevision.\n\nLa maquette avait été fournie par le client et mon rôle consistait à l’intégrer et à la transformer en pages web fonctionnelles, en respectant le design et la hiérarchie visuelle.",
+        "linkS": "https://www.anazirgame.com/"
+    }
+]

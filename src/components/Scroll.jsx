@@ -23,7 +23,7 @@ export default function HorizontalScroll({ children }) {
       }
 
       el.scrollLeft += velocity;
-      velocityRef.current *= 0.9; // friction pour inertie
+      velocityRef.current *= 0.7; // friction pour inertie
       animationRef.current = requestAnimationFrame(animateScroll);
     };
 

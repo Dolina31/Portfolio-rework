@@ -4,28 +4,76 @@
   overflow-x: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  margin-left: 10px;
+  padding-left: 20px;
   margin-right: 10px;
 }
 
 card {
-  background-color: #f5f5f5;
-  cursor: pointer;
+  position: relative;
+  background-color: #ffffff;
+  transition: all 0.3s;
+  min-height: 533px;
 }
 
 .projects-page_content img {
-  height: 370px;
-  width: 326px;
+  height: 280px;
+  width: 356px;
   object-fit: cover;
+  object-position: top;
 }
 
 .card-infos {
-  margin-block: 20px;
+  margin-block: 25px;
+  margin-inline: 15px;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  gap: 20px;
+  gap: 26px;
 }
+
+card h2 {
+  font-family: "Montaga", serif;
+  font-weight: 500;
+  font-size: 1.7em;
+}
+
+.card_text {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+card button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  width: 24%;
+  padding: 7px;
+  transition: all 0.3s ease-in-out;
+}
+
+card button:hover {
+  background-color: #b9b9b9;
+}
+
+.card_orange-border_wrapper {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  bottom: -4px;
+  left: 0px;
+}
+
+.card_orange-border {
+  display: block;
+  height: 9px;
+  width: 65%;
+  background-color: #ffc059;
+}
+
+/*SCROLLBAR*/
 
 .projects-page_content {
   display: flex;
@@ -33,25 +81,24 @@ card {
   overflow-x: auto;
 
   /* Firefox */
-  scrollbar-width: thin; /* rend la scrollbar fine */
-  scrollbar-color: #888888 transparent; /* couleur du pouce / fond */
+  scrollbar-width: thin;
+  scrollbar-color: #888888 transparent;
 }
 
 /* Chrome, Edge, Safari */
 .projects-page_content::-webkit-scrollbar {
-  height: 8px; /* hauteur de la scrollbar horizontale */
+  height: 8px;
 }
 
 .projects-page_content::-webkit-scrollbar-track {
-  background: transparent; /* pas de contour */
+  background: transparent;
 }
 
 .projects-page_content::-webkit-scrollbar-thumb {
-  background-color: #888; /* couleur du scroll */
-  border-radius: 4px; /* arrondi du pouce */
+  background-color: #888;
   transition: background-color 0.3s;
 }
 
 .projects-page_content::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* couleur au hover */
+  background-color: #555;
 }
