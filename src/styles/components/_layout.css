@@ -7,9 +7,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   height: 100vh;
-  transform: translateX(-75px);
 }
 
 .white-box {
@@ -20,4 +19,38 @@
   padding: 2rem;
   backdrop-filter: blur(0.4em);
   scrollbar-width: none;
+}
+
+@media (max-width: 1024px) {
+  .white-box {
+    width: 70%;
+    padding: 1rem;
+  }
+
+  .content-wrapper {
+    gap: 10px;
+    margin-inline: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .white-box {
+    width: 100%;
+  }
+
+  .content-wrapper {
+    margin-inline: unset;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 435px) {
+  .white-box {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content-wrapper {
+    gap: 0px;
+  }
 }

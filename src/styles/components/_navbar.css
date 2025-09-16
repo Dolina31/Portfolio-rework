@@ -2,24 +2,119 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 55px;
-  height: 76%;
+  width: 177px;
+  height: 620px;
   justify-content: center;
-  width: 250px;
+  background: #00000026;
+  text-align: center;
+  padding-inline: 20px;
 }
 
 nav a {
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 1.8em;
   font-weight: 300;
   transition: transform 0.1s;
 }
 
 nav a:hover {
-  color: #eb9100;
+  color: #f5a525;
   font-weight: 600;
 }
 
 nav a.active {
-  color: #eb9100;
+  color: #f5a525;
   font-weight: 600;
+}
+
+.menu-btn {
+  padding: 7px 6px;
+  margin-bottom: 15px;
+  display: none;
+  color: #f5a525;
+  z-index: 1000;
+  background: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(128, 128, 128, 0.616);
+}
+
+.menu-btn span {
+  display: block;
+  height: 2px;
+  width: 25px;
+  background: #f5a525;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile_menu_close {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    width: 140px;
+  }
+
+  nav a {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    text-align: start;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 150px;
+    background: #ffffff;
+    transform: translateX(-110%);
+    box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.342);
+    backdrop-filter: blur(2);
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav a {
+    color: rgb(0, 0, 0);
+  }
+
+  .mobile_menu_wrapper {
+    width: 100%;
+    transform: translateX(15px);
+  }
+
+  .navbar.show {
+    transform: translateX(0);
+  }
+
+  .menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .mobile_menu_close {
+    font-size: 1.3em;
+    color: #f5a525;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 435px) {
+  .mobile_menu_wrapper {
+    z-index: 1;
+    transform: translate(15px, 15px);
+  }
+
+  .menu-btn {
+    position: absolute;
+  }
 }

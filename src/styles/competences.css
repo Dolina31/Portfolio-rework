@@ -27,15 +27,27 @@
 
 .skill-bar-progress {
   z-index: 999;
-  background-color: #eb9100;
+  background-color: #f5a525;
 }
 
 .skill-bar-progress {
   width: 0;
   height: 13px;
-  background-color: #eb9100;
+  background-color: #f5a525;
   transition: width 0.6s ease-out;
 }
+
 .skill-bar-progress.active {
   width: var(--target-width);
+}
+
+@media (max-width: 425px) {
+  .skills-page_content {
+    gap: 47px;
+    margin-inline: 15px;
+  }
+
+  .skills-page_content h2 {
+    font-size: 1.2em;
+  }
 }

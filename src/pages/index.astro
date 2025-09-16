@@ -2,18 +2,24 @@
 import Layout from "../components/Layout.jsx";
 import "../styles/global.css";
 import "../styles/index.css";
-
-const currentPath = Astro.url.pathname;
+import Navbar from "../components/Navbar.jsx";
+import HeadMeta from "../components/HeadMeta.jsx";
 ---
 
-<Layout currentPath={currentPath}>
-  <div class="page_content index-page_content">
-    <h1>
-      Li<span class="orange-letter">n</span>e I<span class="orange-letter"
-        >b</span
-      >o
-    </h1>
-    <p>Développeuse et webdesigneuse</p>
-    <a href="/a-propos" class="index_cta">En savoir plus</a>
-  </div>
-</Layout>
+<head>
+  <HeadMeta />
+</head>
+<div class="content-wrapper">
+  <Navbar client:only="react" currentPath={Astro.url.pathname} />
+  <Layout>
+    <div class="page_content index-page_content">
+      <h1>
+        Li<span class="orange-letter">n</span>e I<span class="orange-letter"
+          >b</span
+        >o
+      </h1>
+      <p>Développeuse et webdesigneuse</p>
+      <a href="/a-propos" class="index_cta">En savoir plus</a>
+    </div>
+  </Layout>
+</div>

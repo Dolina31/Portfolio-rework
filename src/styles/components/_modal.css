@@ -26,7 +26,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 1.3em;
   cursor: pointer;
-  background-color: #ffc059;
+  background-color: #f5a525;
   color: white;
   border: none;
   position: absolute;
@@ -70,7 +70,7 @@
   transform: translateX(-50%);
   height: 7px;
   width: 130%;
-  background-color: #ffc059;
+  background-color: #f5a525;
 }
 
 .modal_title {
@@ -96,7 +96,7 @@
   font-size: 1.3em;
   text-align: center;
   font-weight: 500;
-  background-color: #ffc059;
+  background-color: #f5a525;
   padding-block: 10px;
   width: 160px;
   color: White;
@@ -106,4 +106,47 @@
 
 .modal_links a:hover {
   transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .modal_text {
+    font-size: 0.95em;
+  }
+
+  .modal_title {
+    font-size: 2em;
+  }
+
+  .modal_links a {
+    font-size: 1.1em;
+    width: 126px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal_content {
+    max-width: 80%;
+    padding: 0px;
+  }
+
+  .modal_title {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 425px) {
+  .modal_links {
+    gap: 18px;
+  }
+
+  .modal_links a {
+    font-size: 1em;
+    width: 114px;
+  }
+}
+
+@media (max-width: 340px) {
+  .modal_content {
+    max-width: 86%;
+  }
 }

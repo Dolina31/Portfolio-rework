@@ -10,5 +10,5 @@ export default function MarkdownRenderer({ content }) {
     </React.Fragment>
   ));
 
-  return <div>{contentWithBreaks}</div>;
+  return <p>{contentWithBreaks}</p>;
 }

@@ -1,0 +1,163 @@
+.form_inputs_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  width: 35%;
+  font-size: 1.75em;
+  font-family: "Montaga", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+select,
+textarea {
+  font-size: 22px;
+  font-family: "Montaga", sans-serif;
+  border: none;
+  border-bottom: 3px solid #f5a525;
+  border-left: 3px solid #f5a525;
+  padding: 10px;
+}
+
+select {
+  cursor: pointer;
+}
+
+.form_message {
+  width: 75%;
+}
+
+textarea {
+  height: 180px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: "Montaga", sans-serif;
+  color: #bfbfbf;
+}
+
+input[type="email"]::placeholder {
+  text-decoration: underline;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ff9900;
+}
+
+option {
+  padding: 5px;
+  background-color: #f5a525;
+  border-bottom: 1px solid grey;
+}
+
+form button {
+  transform: translateY(35px);
+  font-size: 1.3em;
+  font-family: "Montaga", sans-serif;
+  padding: 10px 25px;
+  background-color: #f5a525;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.829);
+  color: #f5a525;
+  box-shadow: 0px 2px 4px rgba(128, 128, 128, 0.616);
+}
+
+.confirmation_modal {
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 1.2em;
+  background-color: #f5a525;
+  color: white;
+  padding: 15px 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeInOut 5s forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 1024px) {
+  label {
+    width: 42%;
+    font-size: 1.4em;
+    text-wrap: nowrap;
+  }
+
+  .form_message {
+    width: 92%;
+  }
+}
+
+@media (max-width: 500px) {
+  form {
+    margin-top: 40px;
+  }
+
+  .contact-page_content {
+    align-items: flex-start;
+    margin-block: 20px;
+  }
+
+  .form_inputs_wrapper {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .form_inputs_wrapper {
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+
+  label {
+    width: 92%;
+  }
+
+  form button {
+    margin-bottom: 50px;
+  }
+}

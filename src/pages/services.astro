@@ -1,42 +1,48 @@
 ---
 import Layout from "../components/Layout.jsx";
-import "../styles/a-propos.css";
-const currentPath = Astro.url.pathname;
 import services from "../data/services.json";
+import Navbar from "../components/Navbar.jsx";
 import "../styles/services.css";
+import HeadMeta from "../components/HeadMeta.jsx";
 ---
 
-<Layout currentPath={currentPath}>
-  <div class="page_content service-page_content">
-    <h1 class="sr-only">Services</h1>
-    {
-      services.map((servicePack) => (
-        <card class="service_card">
-          <div class="service_card_title_wrapper">
-            <div class="orange-box_wrapper">
-              {" "}
-              <span class="orange-box">
-                <img
-                  src="/images/arrow.png"
-                  alt="fléche blanche pointant vers le bas"
-                />
-              </span>
+<head>
+  <HeadMeta />
+</head>
+<div class="content-wrapper">
+  <Navbar client:only="react" currentPath={Astro.url.pathname} />
+  <Layout>
+    <div class="page_content service-page_content">
+      <h1 class="sr-only">Services</h1>
+      {
+        services.map((servicePack) => (
+          <card class="service_card">
+            <div class="service_card_title_wrapper">
+              <div class="orange-box_wrapper">
+                {" "}
+                <span class="orange-box">
+                  <img
+                    src="/images/arrow.png"
+                    alt="fléche blanche pointant vers le bas"
+                  />
+                </span>
+              </div>
+              <h2>{servicePack.title}</h2>
             </div>
-            <h2>{servicePack.title}</h2>
-          </div>
-          <div class="services_wrapper">
-            {Object.values(servicePack.services).map((s) => (
-              <p>{s}</p>
-            ))}{" "}
-            <a
-              href={`/contact?raison=devis&forfait=${servicePack.slug}`}
-              class="service_cta_button"
-            >
-              Demander un devis
-            </a>
-          </div>
-        </card>
-      ))
-    }
-  </div>
-</Layout>
+            <div class="services_wrapper">
+              {Object.values(servicePack.services).map((s) => (
+                <p>{s}</p>
+              ))}{" "}
+              <a
+                href={`/contact?objet=devis&forfait=${servicePack.slug}`}
+                class="service_cta_button"
+              >
+                Demander un devis
+              </a>
+            </div>
+          </card>
+        ))
+      }
+    </div>
+  </Layout>
+</div>

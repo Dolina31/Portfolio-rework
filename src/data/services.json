@@ -1,7 +1,7 @@
 [
     {
         "title": "Forfait Maquette",
-        "slug": "maquette",
+        "slug": "Maquette",
         "services": {
             "service1": "Design sur-mesure entre 1 à 5 pages",
             "service2": "Création d’une charte graphique personnalisée",
@@ -11,7 +11,7 @@
     },
     {
         "title": "Forfait Site",
-        "slug": "site",
+        "slug": "Site",
         "services": {
             "service1": "Intégration HTML/CSS responsive à partir d’une maquette existante",
             "service2": "Développement du site",
@@ -22,7 +22,7 @@
     },
     {
         "title": "Forfait Complet",
-        "slug": "complet",
+        "slug": "Complet",
         "services": {
             "service1": "Design sur-mesure entre 1 à 5 pages",
             "service2": "1 à 2 séries de modifications incluses",

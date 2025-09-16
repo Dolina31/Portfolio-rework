@@ -1,8 +1,8 @@
 ---
 import Layout from "../components/Layout.jsx";
 import SkillsBar from "../components/SkillsBar.jsx";
-
-const currentPath = Astro.url.pathname;
+import Navbar from "../components/Navbar.jsx";
+import HeadMeta from "../components/HeadMeta.jsx";
 
 const skillsInfos = [
   { name: "Design et maquette", progress: "80%" },
@@ -12,16 +12,22 @@ const skillsInfos = [
 ];
 ---
 
-<Layout currentPath={currentPath}>
-  <div class="page_content skills-page_content">
-    <h1 class="sr-only">Compétences</h1>
-    {
-      skillsInfos.map((skill, i) => (
-        <div class="skill_wrapper">
-          <h2>{skill.name}</h2>
-          <SkillsBar client:load progress={skill.progress} index={i} />
-        </div>
-      ))
-    }
-  </div>
-</Layout>
+<head>
+  <HeadMeta />
+</head>
+<div class="content-wrapper">
+  <Navbar client:only="react" currentPath={Astro.url.pathname} />
+  <Layout>
+    <div class="page_content skills-page_content">
+      <h1 class="sr-only">Compétences</h1>
+      {
+        skillsInfos.map((skill, i) => (
+          <div class="skill_wrapper">
+            <h2>{skill.name}</h2>
+            <SkillsBar client:load progress={skill.progress} index={i} />
+          </div>
+        ))
+      }
+    </div>
+  </Layout>
+</div>

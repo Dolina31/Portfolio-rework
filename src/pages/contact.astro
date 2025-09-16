@@ -1,9 +1,20 @@
 ---
 import Layout from "../components/Layout.jsx";
 import ContactForm from "../components/ContactForm.jsx";
+import Navbar from "../components/Navbar.jsx";
+import "../styles/contact.css";
+import HeadMeta from "../components/HeadMeta.jsx";
 ---
 
-<Layout currentPath={Astro.url.pathname}>
-  <h1 class="sr-only">Projets</h1>
-  <ContactForm client:load />
-</Layout>
+<head>
+  <HeadMeta />
+</head>
+<div class="content-wrapper">
+  <Navbar client:only="react" currentPath={Astro.url.pathname} />
+  <Layout>
+    <h1 class="sr-only">Contact</h1>
+    <div class="page_content contact-page_content">
+      <ContactForm client:only="react" />
+    </div>
+  </Layout>
+</div>

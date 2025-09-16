@@ -53,7 +53,10 @@ card button {
 }
 
 card button:hover {
-  background-color: #b9b9b9;
+  cursor: pointer;
+  background-color: #f5a525;
+  color: white;
+  box-shadow: 0px 2px 4px rgba(128, 128, 128, 0.616);
 }
 
 .card_orange-border_wrapper {
@@ -70,7 +73,7 @@ card button:hover {
   display: block;
   height: 9px;
   width: 65%;
-  background-color: #ffc059;
+  background-color: #f5a525;
 }
 
 /*SCROLLBAR*/
@@ -101,4 +104,47 @@ card button:hover {
 
 .projects-page_content::-webkit-scrollbar-thumb:hover {
   background-color: #555;
+}
+
+@media (max-width: 1024px) {
+  .projects-page_content {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .projects-page_content {
+    gap: 40px;
+    padding-left: 0px;
+    margin-right: 0px;
+    scrollbar-width: none;
+    flex-direction: column;
+  }
+
+  .projects-page_content img {
+    width: 100%;
+  }
+
+  card {
+    width: 85%;
+    min-height: 500px;
+  }
+
+  card h2 {
+    font-size: 1.5em;
+  }
+
+  card p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 325px) {
+  card h2 {
+    font-size: 1.3em;
+  }
+  card {
+    width: 90%;
+    min-height: unset;
+  }
 }
