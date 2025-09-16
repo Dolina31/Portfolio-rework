@@ -49,21 +49,6 @@
 
 @media (max-width: 530px) {
   .index-page_content h1 {
-    font-size: 6em;
-  }
-
-  .index-page_content p {
-    font-size: 1.9em;
-  }
-
-  .index_cta {
-    margin-top: 15px;
-    font-size: 1.3em;
-  }
-}
-
-@media (max-width: 415px) {
-  .index-page_content h1 {
     font-size: 7em;
     text-align: center;
   }
@@ -75,8 +60,8 @@
 
   .index_cta {
     margin-top: 10px;
-    font-size: 1.2em;
-    padding-block: 8px;
+    font-size: 1.4em;
+    padding-block: 10px;
     padding-inline: 25px;
   }
 }

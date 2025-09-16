@@ -4,7 +4,10 @@ export default function HeadMeta() {
   return (
     <>
       <meta charSet="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      />
       <title>Portfolio</title>
       <link rel="stylesheet" href="/src/styles/global.css" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
