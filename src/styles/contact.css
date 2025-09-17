@@ -39,7 +39,7 @@ select {
 }
 
 .form_message {
-  width: 75%;
+  width: 73%;
 }
 
 textarea {
@@ -104,8 +104,8 @@ form button:hover {
 
 @keyframes fadeInOut {
   0% {
-    opacity: 0;
-    transform: translateY(-20px);
+    opacity: 1;
+    transform: translateY(-0px);
   }
   10% {
     opacity: 1;
@@ -116,8 +116,26 @@ form button:hover {
     transform: translateY(0);
   }
   100% {
-    opacity: 0;
-    transform: translateY(-20px);
+    opacity: 1;
+    transform: translateY(-0px);
+  }
+}
+
+/* Tablettes en mode paysage */
+@media (min-width: 600px) and (max-width: 1366px) and (orientation: landscape) {
+  .form_inputs_wrapper {
+    margin-bottom: 31px;
+  }
+
+  form button {
+    transform: translateY(15px);
+    font-size: 1.3em;
+    font-family: "Montaga", sans-serif;
+    padding: 10px 25px;
+    background-color: #f5a525;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    border: none;
   }
 }
 
@@ -134,8 +152,16 @@ form button:hover {
 }
 
 @media (max-width: 500px) {
+  .confirmation_modal {
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    text-align: center;
+  }
+
   form {
-    margin-top: 40px;
+    margin-top: 10px;
   }
 
   .contact-page_content {
@@ -158,6 +184,6 @@ form button:hover {
   }
 
   form button {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
 }

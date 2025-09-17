@@ -1,14 +1,30 @@
 .service-page_content {
   display: flex;
-  gap: 3%;
+  overflow-x: scroll;
+  justify-content: start;
+  gap: 5%;
+  padding-left: 2vw;
+}
+
+.service_card:first-child {
+  scroll-snap-align: center;
 }
 
 .service_card {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
   transition: all 0.3s ease-in-out;
+  padding-block: 15px;
+}
+
+.service-page_content::after {
+  content: "";
+  flex: 0 0 2vw; /* moitié de la largeur de la fenêtre */
 }
 
 .service_card p:nth-child(odd) {
   background-color: #f5f5f5;
+  width: 100%;
 }
 
 .service_card_title_wrapper {
@@ -38,7 +54,9 @@
 }
 
 .services_wrapper {
-  max-width: 260px;
+  position: relative;
+  min-height: 550px;
+  width: 550px;
   background-color: white;
   padding: 40px 20px;
   display: flex;
@@ -50,13 +68,15 @@
 }
 
 .service_card p {
+  font-size: 1.5em;
+  padding: 10px 5px;
   line-height: 1.4;
   font-family: "Montaga", serif;
-  font-size: 1em;
-  padding: 10px 5px;
 }
 
 .service_cta_button {
+  position: absolute;
+  bottom: 50px;
   transform: translateY(20px);
   font-family: "Montserrat", sans-serif;
   padding: 5px 8px;
@@ -69,17 +89,25 @@
   box-shadow: 0px 2px 4px rgba(128, 128, 128, 0.616);
 }
 
+/* Tablettes en mode paysage */
+@media (min-width: 600px) and (max-width: 1366px) and (orientation: landscape) {
+  .services_wrapper {
+    min-height: 490px;
+    width: 400px;
+    padding: 20px 20px;
+  }
+  .service_card p {
+    font-size: 1.1em;
+  }
+  .service_cta_button {
+    transform: translateY(20px);
+  }
+}
+
 @media (max-width: 1250px) {
   .service-page_content {
-    flex-wrap: wrap;
-  }
-
-  .services_wrapper {
-    min-height: 400px;
-  }
-
-  .service_card {
-    padding-block: 15px;
+    gap: 40%;
+    scroll-snap-type: x mandatory;
   }
 
   .service_card_title_wrapper {
@@ -87,8 +115,32 @@
   }
 }
 
+@media (max-width: 880px) {
+  .service-page_content {
+    padding-left: 50vw;
+  }
+}
+
 @media (max-width: 425px) {
+  .service-page_content {
+    padding-left: 50vw;
+  }
+
   .services_wrapper {
+    width: 300px;
     min-height: unset;
+  }
+
+  .service_card p {
+    font-size: 1.25em;
+  }
+
+  .service-page_content {
+    gap: 25%;
+  }
+
+  .service_cta_button {
+    position: relative;
+    transform: translateY(55px);
   }
 }

@@ -114,9 +114,10 @@ card button:hover {
 
 @media (max-width: 425px) {
   .projects-page_content {
-    gap: 40px;
+    gap: 80px;
     padding-left: 0px;
     margin-right: 0px;
+    padding-block: 50px;
     scrollbar-width: none;
     flex-direction: column;
   }
@@ -127,7 +128,7 @@ card button:hover {
 
   card {
     width: 85%;
-    min-height: 500px;
+    min-height: 550px;
   }
 
   card h2 {

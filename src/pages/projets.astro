@@ -4,6 +4,7 @@ import Modal from "../components/Modal.jsx";
 import Navbar from "../components/Navbar.jsx";
 import projects from "../data/projets.json";
 import MarkdownRenderer from "../components/MarkdownRenderer.jsx";
+import HorizontalScroll from "../components/HorizontalScroll.jsx";
 import "../styles/projets.css";
 import HeadMeta from "../components/HeadMeta.jsx";
 ---
@@ -16,9 +17,12 @@ import HeadMeta from "../components/HeadMeta.jsx";
   <Navbar client:only="react" currentPath={Astro.url.pathname} />
   <Layout>
     <h1 class="sr-only">Projets</h1>
+    <HorizontalScroll
+      client:only="react"
+      className={"page_content projects-page_content"}
+    >
+      <!-- Cards côté serveur -->
 
-    <!-- Cards côté serveur -->
-    <div class="page_content projects-page_content">
       {
         projects.map((project, i) => (
           <card class="card" key={i}>
@@ -39,8 +43,7 @@ import HeadMeta from "../components/HeadMeta.jsx";
           </card>
         ))
       }
-    </div>
-
+    </HorizontalScroll>
     <!-- Modale React globale -->
     <Modal projects={projects} client:load />
   </Layout>
