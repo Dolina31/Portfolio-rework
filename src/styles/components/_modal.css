@@ -135,6 +135,10 @@
 }
 
 @media (max-width: 425px) {
+  .modal {
+    height: 100%;
+  }
+
   .modal_links {
     gap: 18px;
   }

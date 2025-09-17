@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   gap: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 form {
@@ -71,7 +71,7 @@ option {
 }
 
 form button {
-  transform: translateY(35px);
+  transform: translateY(25px);
   font-size: 1.3em;
   font-family: "Montaga", sans-serif;
   padding: 10px 25px;

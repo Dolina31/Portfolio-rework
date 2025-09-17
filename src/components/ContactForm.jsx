@@ -82,7 +82,7 @@ export default function ContactForm() {
           </label>
 
           <label>
-            Objet de la demande
+            Objet
             <select
               value={objet}
               onChange={(e) => setObjet(e.target.value)}

@@ -14,10 +14,7 @@ import HorizontalScroll from "../components/HorizontalScroll";
   <Navbar client:only="react" currentPath={Astro.url.pathname} />
   <Layout>
     <h1 class="sr-only">Services</h1>
-    <HorizontalScroll
-      client:only="react"
-      className={"page_content service-page_content"}
-    >
+    <div class="page_content service-page_content">
       {
         services.map((servicePack) => (
           <card class="service_card">
@@ -47,6 +44,6 @@ import HorizontalScroll from "../components/HorizontalScroll";
           </card>
         ))
       }
-    </HorizontalScroll>
+    </div>
   </Layout>
 </div>

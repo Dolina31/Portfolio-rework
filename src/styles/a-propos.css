@@ -71,6 +71,7 @@
 @media (max-width: 510px) {
   .about-page_content {
     flex-direction: column-reverse;
+    min-height: 750px;
   }
 
   .about-page_content img {
@@ -88,6 +89,6 @@
   }
 
   .about-page_content p {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 }

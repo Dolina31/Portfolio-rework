@@ -1,15 +1,5 @@
 [
     {
-        "title": "Forfait Maquette",
-        "slug": "Maquette",
-        "services": {
-            "service1": "Design sur-mesure entre 1 à 5 pages",
-            "service2": "Création d’une charte graphique personnalisée",
-            "service3": "Responsive design (ordinateur, mobile, tablette)",
-            "service4": "1 à 2 séries de modifications incluses"
-        }
-    },
-    {
         "title": "Forfait Site",
         "slug": "Site",
         "services": {
@@ -18,6 +8,16 @@
             "service3": "Intégration d’animations si souhaitées",
             "service4": "Livraison des fichiers ou mise en ligne (optionnelle)",
             "service5": "Support technique pendant 1 semaine après livraison"
+        }
+    },
+    {
+        "title": "Forfait Maquette",
+        "slug": "Maquette",
+        "services": {
+            "service1": "Design sur-mesure entre 1 à 5 pages",
+            "service2": "Création d’une charte graphique personnalisée",
+            "service3": "Responsive design (ordinateur, mobile, tablette)",
+            "service4": "1 à 2 séries de modifications incluses"
         }
     },
     {

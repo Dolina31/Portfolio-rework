@@ -9,7 +9,6 @@ export default function HeadMeta() {
         content="width=device-width, initial-scale=1.0, viewport-fit=cover"
       />
       <title>Portfolio</title>
-      <link rel="stylesheet" href="/src/styles/global.css" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
         rel="preconnect"

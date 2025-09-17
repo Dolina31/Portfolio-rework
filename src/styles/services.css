@@ -1,33 +1,19 @@
 .service-page_content {
+  flex-direction: column;
   display: flex;
   overflow-x: scroll;
   justify-content: start;
-  gap: 5%;
-  padding-left: 2vw;
-}
-
-.service_card:first-child {
-  scroll-snap-align: center;
-}
-
-.service_card {
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-  transition: all 0.3s ease-in-out;
-  padding-block: 15px;
-}
-
-.service-page_content::after {
-  content: "";
-  flex: 0 0 2vw; /* moitié de la largeur de la fenêtre */
+  gap: 17%;
+  padding-block: 50px;
 }
 
 .service_card p:nth-child(odd) {
   background-color: #f5f5f5;
-  width: 100%;
+  width: 85%;
 }
 
 .service_card_title_wrapper {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,10 +41,9 @@
 
 .services_wrapper {
   position: relative;
-  min-height: 550px;
-  width: 550px;
+  width: 100%;
   background-color: white;
-  padding: 40px 20px;
+  padding-block: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,16 +52,21 @@
   border-bottom: solid 8px #f5a525;
 }
 
+.service_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
 .service_card p {
-  font-size: 1.5em;
+  font-size: 1.4em;
   padding: 10px 5px;
   line-height: 1.4;
   font-family: "Montaga", serif;
 }
 
 .service_cta_button {
-  position: absolute;
-  bottom: 50px;
   transform: translateY(20px);
   font-family: "Montserrat", sans-serif;
   padding: 5px 8px;
@@ -92,55 +82,45 @@
 /* Tablettes en mode paysage */
 @media (min-width: 600px) and (max-width: 1366px) and (orientation: landscape) {
   .services_wrapper {
-    min-height: 490px;
-    width: 400px;
-    padding: 20px 20px;
+    min-height: unset;
   }
+
+  .service_card {
+    width: 80%;
+  }
+
   .service_card p {
     font-size: 1.1em;
   }
+
   .service_cta_button {
-    transform: translateY(20px);
+    transform: translateY(25px);
   }
 }
 
 @media (max-width: 1250px) {
   .service-page_content {
-    gap: 40%;
-    scroll-snap-type: x mandatory;
-  }
-
-  .service_card_title_wrapper {
-    margin-bottom: 8px;
+    align-items: center;
+    padding-left: unset;
   }
 }
 
 @media (max-width: 880px) {
-  .service-page_content {
-    padding-left: 50vw;
+  .service_card {
+    width: 90%;
   }
 }
 
 @media (max-width: 425px) {
-  .service-page_content {
-    padding-left: 50vw;
-  }
-
-  .services_wrapper {
-    width: 300px;
-    min-height: unset;
+  .service_card {
+    width: 90%;
   }
 
   .service_card p {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 
   .service-page_content {
-    gap: 25%;
-  }
-
-  .service_cta_button {
-    position: relative;
-    transform: translateY(55px);
+    gap: 50px;
   }
 }
