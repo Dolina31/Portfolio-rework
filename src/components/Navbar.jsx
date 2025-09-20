@@ -28,7 +28,12 @@ export default function Navbar({ currentPath }) {
         </button>
       </div>
       {/* Navbar */}
+
       <nav className={`navbar ${open ? "show" : ""}`}>
+        {" "}
+        <div>
+          <img src="/images/logo.png" alt="Logo de Line Ibo" loading="lazy" />
+        </div>
         <span className="mobile_menu_close" onClick={() => setOpen(!open)}>
           ✕
         </span>

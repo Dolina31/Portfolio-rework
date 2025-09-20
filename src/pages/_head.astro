@@ -1,0 +1,59 @@
+---
+const {
+  title = "Portfolio",
+  description = "Line Ibo développeuse web freelance",
+} = Astro.props;
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/images/logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="true"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100..700&family=Montaga&family=Montserrat:wght@100..900&family=Roboto:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BALISE META -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lineibo.com" />
+    <meta property="og:image" content="/images/meta-balise-img.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/images/meta-balise-img.png" />
+  </head>
+  <body>
+    <slot />
+  </body>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Line Ibo",
+      "url": "https://lineibo.com",
+      "jobTitle": "Développeuse web freelance",
+      "sameAs": [
+        "https://www.linkedin.com/in/line-ibo-b74530268/",
+        "https://github.com/Dolina31"
+      ]
+    }
+  </script>
+</html>

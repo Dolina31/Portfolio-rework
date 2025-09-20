@@ -1,10 +1,12 @@
 .service-page_content {
   flex-direction: column;
   display: flex;
-  overflow-x: scroll;
   justify-content: start;
   gap: 17%;
-  padding-block: 50px;
+}
+
+.service-page_content::before {
+  content: "";
 }
 
 .service_card p:nth-child(odd) {
@@ -121,6 +123,6 @@
   }
 
   .service-page_content {
-    gap: 50px;
+    gap: 100px;
   }
 }

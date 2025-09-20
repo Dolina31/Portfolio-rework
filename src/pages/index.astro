@@ -3,12 +3,13 @@ import Layout from "../components/Layout.jsx";
 import "../styles/global.css";
 import "../styles/index.css";
 import Navbar from "../components/Navbar.jsx";
-import HeadMeta from "../components/HeadMeta.jsx";
+import Head from "./_head.astro";
 ---
 
-<head>
-  <HeadMeta />
-</head>
+<Head
+  title="Portfolio"
+  description="Line Ibo, développeuse web freelance spécialisé en création de sites vitrines. Des solutions rapides, modernes et adaptées à vos besoins."
+/>
 <div class="content-wrapper">
   <Navbar client:only="react" currentPath={Astro.url.pathname} />
   <Layout>

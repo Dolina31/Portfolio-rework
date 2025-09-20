@@ -3,47 +3,49 @@ import Layout from "../components/Layout.jsx";
 import services from "../data/services.json";
 import Navbar from "../components/Navbar.jsx";
 import "../styles/services.css";
-import HeadMeta from "../components/HeadMeta.jsx";
-import HorizontalScroll from "../components/HorizontalScroll";
+import Head from "./_head.astro";
 ---
 
-<head>
-  <HeadMeta />
-</head>
-<div class="content-wrapper">
-  <Navbar client:only="react" currentPath={Astro.url.pathname} />
-  <Layout>
-    <h1 class="sr-only">Services</h1>
-    <div class="page_content service-page_content">
-      {
-        services.map((servicePack) => (
-          <card class="service_card">
-            <div class="service_card_title_wrapper">
-              <div class="orange-box_wrapper">
-                {" "}
-                <span class="orange-box">
-                  <img
-                    src="/images/arrow.png"
-                    alt="fléche blanche pointant vers le bas"
-                  />
-                </span>
+<Head
+  title="Portfolio | Services"
+  description="Découvrez mes services de création de sites web adaptés à vos besoins."
+>
+  <div class="content-wrapper">
+    <Navbar client:only="react" currentPath={Astro.url.pathname} />
+    <Layout>
+      <h1 class="sr-only">Services</h1>
+      <div class="page_content service-page_content">
+        {
+          services.map((servicePack) => (
+            <div class="service_card">
+              <div class="service_card_title_wrapper">
+                <div class="orange-box_wrapper">
+                  {" "}
+                  <span class="orange-box">
+                    <img
+                      src="/images/arrow.png"
+                      alt="fléche blanche pointant vers le bas"
+                    />
+                  </span>
+                </div>
+                <h2>{servicePack.title}</h2>
               </div>
-              <h2>{servicePack.title}</h2>
+              <div class="services_wrapper">
+                {Object.values(servicePack.services).map((s) => (
+                  <p>{s}</p>
+                ))}{" "}
+                <a
+                  href={`/contact?objet=Devis&forfait=${servicePack.slug}`}
+                  class="service_cta_button"
+                >
+                  Demander un devis
+                </a>
+              </div>
             </div>
-            <div class="services_wrapper">
-              {Object.values(servicePack.services).map((s) => (
-                <p>{s}</p>
-              ))}{" "}
-              <a
-                href={`/contact?objet=Devis&forfait=${servicePack.slug}`}
-                class="service_cta_button"
-              >
-                Demander un devis
-              </a>
-            </div>
-          </card>
-        ))
-      }
-    </div>
-  </Layout>
-</div>
+          ))
+        }
+        <div class="spacer"></div>
+      </div>
+    </Layout>
+  </div>
+</Head>

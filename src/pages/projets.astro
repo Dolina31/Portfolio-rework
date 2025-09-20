@@ -6,45 +6,47 @@ import projects from "../data/projets.json";
 import MarkdownRenderer from "../components/MarkdownRenderer.jsx";
 import HorizontalScroll from "../components/HorizontalScroll.jsx";
 import "../styles/projets.css";
-import HeadMeta from "../components/HeadMeta.jsx";
+import Head from "./_head.astro";
 ---
 
-<head>
-  <HeadMeta />
-</head>
+<Head
+  title="Portfolio | Mes Projets"
+  description="Explorez mes réalisations : des sites vitrines modernes et performants pour booster la visibilité de mes clients."
+>
+  <div class="content-wrapper">
+    <Navbar client:only="react" currentPath={Astro.url.pathname} />
+    <Layout>
+      <h1 class="sr-only">Projets</h1>
+      <HorizontalScroll
+        client:only="react"
+        className={"page_content projects-page_content"}
+      >
+        <!-- Cards côté serveur -->
 
-<div class="content-wrapper">
-  <Navbar client:only="react" currentPath={Astro.url.pathname} />
-  <Layout>
-    <h1 class="sr-only">Projets</h1>
-    <HorizontalScroll
-      client:only="react"
-      className={"page_content projects-page_content"}
-    >
-      <!-- Cards côté serveur -->
+        {
+          projects.map((project, i) => (
+            <div class="card">
+              <img src={project.image} alt={project.title} />
+              <div class="card-infos">
+                <h2>{project.title}</h2>
+                <div class="card_text">
+                  <MarkdownRenderer content={project.description} />
+                </div>
+                <button class="open-modal-btn" data-project-index={i}>
+                  Plus
+                </button>
 
-      {
-        projects.map((project, i) => (
-          <card class="card" key={i}>
-            <img src={project.image} alt={project.title} />
-            <div class="card-infos">
-              <h2>{project.title}</h2>
-              <div class="card_text">
-                <MarkdownRenderer content={project.description} />
-              </div>
-              <button class="open-modal-btn" data-project-index={i}>
-                Plus
-              </button>
-
-              <div class="card_orange-border_wrapper">
-                <span class="card_orange-border" />
+                <div class="card_orange-border_wrapper">
+                  <span class="card_orange-border" />
+                </div>
               </div>
             </div>
-          </card>
-        ))
-      }
-    </HorizontalScroll>
-    <!-- Modale React globale -->
-    <Modal projects={projects} client:load />
-  </Layout>
-</div>
+          ))
+        }
+        <div class="spacer"></div>
+      </HorizontalScroll>
+      <!-- Modale React globale -->
+      <Modal projects={projects} client:load />
+    </Layout>
+  </div>
+</Head>

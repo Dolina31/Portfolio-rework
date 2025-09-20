@@ -12,12 +12,12 @@
 }
 
 .white-box {
-  width: 63%;
+  width: 53%;
   padding-inline: 40px;
-  height: 83dvh;
+  height: 88dvh;
   max-height: 750px;
   background-color: rgba(255, 255, 255, 0.705);
-  overflow: scroll;
+  overflow: auto;
   backdrop-filter: blur(0.4em);
   scrollbar-width: none;
 }

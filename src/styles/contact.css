@@ -1,5 +1,5 @@
 .form_inputs_wrapper {
-  width: 100%;
+  width: 110%;
   display: flex;
   justify-content: center;
   gap: 50px;
@@ -39,7 +39,7 @@ select {
 }
 
 .form_message {
-  width: 73%;
+  width: 84%;
 }
 
 textarea {
@@ -139,11 +139,25 @@ form button:hover {
   }
 }
 
+@media (max-width: 1143px) {
+  .form_inputs_wrapper {
+    width: 130%;
+  }
+
+  .form_message {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1024px) {
   label {
     width: 42%;
     font-size: 1.4em;
     text-wrap: nowrap;
+  }
+
+  .form_inputs_wrapper {
+    width: 100%;
   }
 
   .form_message {
@@ -166,7 +180,7 @@ form button:hover {
 
   .contact-page_content {
     align-items: flex-start;
-    margin-block: 20px;
+    margin-block: 35px;
   }
 
   .form_inputs_wrapper {

@@ -4,11 +4,9 @@
   overflow-x: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding-left: 20px;
-  margin-right: 10px;
 }
 
-card {
+.card {
   position: relative;
   background-color: #ffffff;
   transition: all 0.3s;
@@ -30,7 +28,7 @@ card {
   gap: 26px;
 }
 
-card h2 {
+.card h2 {
   font-family: "Montaga", serif;
   font-weight: 500;
   font-size: 1.7em;
@@ -42,7 +40,7 @@ card h2 {
   font-weight: 300;
 }
 
-card button {
+.card button {
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
   cursor: pointer;
@@ -52,7 +50,7 @@ card button {
   transition: all 0.3s ease-in-out;
 }
 
-card button:hover {
+.card button:hover {
   cursor: pointer;
   background-color: #f5a525;
   color: white;
@@ -106,25 +104,26 @@ card button:hover {
     width: 100%;
   }
 
-  card {
+  .card {
     width: 85%;
     min-height: 550px;
   }
 
-  card h2 {
+  .card h2 {
     font-size: 1.5em;
   }
 
-  card p {
+  .card p {
     font-size: 0.9em;
   }
 }
 
 @media (max-width: 325px) {
-  card h2 {
+  .card h2 {
     font-size: 1.3em;
   }
-  card {
+
+  .card {
     width: 90%;
     min-height: unset;
   }

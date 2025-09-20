@@ -24,6 +24,10 @@ body {
   scrollbar-color: #888888 transparent;
 }
 
+.spacer {
+  padding: 1px;
+}
+
 .orange-letter {
   color: #f5a525;
 }
